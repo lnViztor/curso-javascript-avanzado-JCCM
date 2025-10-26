@@ -1,7 +1,3 @@
-Gracias por avisar. Te dejo el **README completo** con el **Índice corregido y enlazado** a cada sección. Está listo para copiar y pegar.
-
----
-
 # Curso de JavaScript Avanzado
 
 ## Índice
