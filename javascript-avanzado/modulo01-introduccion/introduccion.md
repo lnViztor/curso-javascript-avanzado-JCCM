@@ -214,11 +214,11 @@ docker run -p 8080:80 miapp
 
 ## 11. Cierre
 
-En este módulo has aprendido:
-✅ Qué es JavaScript y dónde se ejecuta
-✅ Qué son motor JS, call stack y event loop
-✅ Qué significa ECMAScript
-✅ Cómo usar la consola y ejecutar JS
-✅ Cómo trabajar desde Codespaces
+En este módulo has aprendido:  
+✅ Qué es JavaScript y dónde se ejecuta  
+✅ Qué son motor JS, call stack y event loop  
+✅ Qué significa ECMAScript  
+✅ Cómo usar la consola y ejecutar JS  
+✅ Cómo trabajar desde Codespaces  
 
 Ahora estás listo para entrar en JS moderno con bases sólidas 💪
