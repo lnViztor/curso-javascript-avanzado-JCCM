@@ -143,10 +143,10 @@ HTML:
 
 En Codespaces tenemos:
 
-✔ Node.js preinstalado
-✔ Navegador integrado (preview)
-✔ Terminal para scripts
-✔ Live Server o Docker para probar HTML/JS
+✔ Node.js preinstalado  
+✔ Navegador integrado (preview)  
+✔ Terminal para scripts  
+✔ Live Server o Docker para probar HTML/JS  
 
 ---
 
