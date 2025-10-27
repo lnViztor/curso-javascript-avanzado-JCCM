@@ -12,12 +12,12 @@ Durante mucho tiempo JavaScript fue considerado un lenguaje “menor” usado so
 
 JavaScript es un lenguaje:
 
-✅ Interpretado (ejecutado línea a línea)
-✅ Dinámico y de tipado débil
-✅ Basado en prototipos
-✅ Multiparadigma: permite estilo imperativo, funcional y orientado a objetos
-✅ Asíncrono y no bloqueante
-✅ Ejecutable en cliente (navegador) y servidor (Node.js)
+✅ Interpretado (ejecutado línea a línea).
+✅ Dinámico y de tipado débil.
+✅ Basado en prototipos.
+✅ Multiparadigma: permite estilo imperativo, funcional y orientado a objetos.
+✅ Asíncrono y no bloqueante.
+✅ Ejecutable en cliente (navegador) y servidor (Node.js).
 
 Es uno de los pilares del desarrollo web moderno junto con **HTML** y **CSS**, y el único lenguaje capaz de ejecutarse de forma nativa en los navegadores.
 
