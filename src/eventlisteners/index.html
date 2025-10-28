@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <form id="registerForm">
+        <input type="text" id="name" placeholder="Nombre"><br><br>
+        <span id="mensaje"></span>
+        <input type="email" id="email" placeholder="Email"><br><br>
+        <button type="submit">Enviar</button>
+   </form>
+
+<script>
+
+
+class Proceso {
+
+    contador = 0
+
+    contar = () => this.contador++
+}
+
+const procesarMucho = ({onStart, onProcess, onFinish, onError, config}) => {
+
+    let proceso = new Proceso()
+
+    // el proceso empieza aqui
+    cuandoEmpieza(proceso)
+    
+    let interval = setInterval(() =>{ 
+        proceso.contar() 
+        if(proceso.contador >= config.veces) { 
+            clearInterval(interval)
+            cuandoAcaba('success')
+        }
+        cadaVezQueAvanza(proceso.contador, config.veces)
+    },2000)
+
+}
+
+
+
+procesarMucho({
+    cuandoEmpieza: (proceso) =>{ console.log(proceso) },
+    cuandoAcaba: (resultado) => {},
+    cadaVezQueAvanza: (parcial,total) => {},
+    siHayError: (error) => {},
+    config: {
+        veces: 5
+    }
+})
+
+
+function siEsPar(numero, callback) {
+  setTimeout(() =>{
+    if (numero % 2 === 0) {
+        callback(numero);
+    } else {
+        console.log("No es par");
+    }
+
+
+  },2000)
+  
+}
+
+
+calcular = (numero) => console.log(`el ${numero} es par`)
+
+
+siEsPar(5, calcular); // 4 es par
+siEsPar(4, calcular); // 4 es par
+
+calcular(5)
+
+
+
+
+
+    const form = document.getElementById("registerForm");
+    const name = document.getElementById("name");
+    const mensaje = document.getElementById("mensaje");
+
+    const submitHandler = (event) => {
+        
+        event.preventDefault();
+
+        console.log(this,event,name.value)
+
+        if(name.value ==='hola') event.target.submit()
+        else mensaje.innerHTML = 'El texto debe ser hola'
+       
+
+
+    }
+    form.addEventListener("submit",submitHandler)
+
+
+
+
+class EventEmitter {
+  constructor() {
+    this.eventHandlers = {};
+  }
+
+  on(event, callback) {
+    if (!this.eventHandlers[event]) this.eventHandlers[event] = [];
+    this.eventHandlers[event].push(callback);
+  }
+
+  emit(event, data) {
+    if (this.eventHandlers[event]) {
+      this.eventHandlers[event].forEach(callback => callback(data));
+    }
+  }
+}
+
+
+const emitter = new EventEmitter()
+
+emitter.on('login', (user) => console.log(user))
+
+
+
+
+emitter.emit('login','nananan')
+
+
+
+
+</script>
+
+
+</body>
+</html>
