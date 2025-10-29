@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="styles/formulario-dark.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Formulario de Registro</h1>
+      <form class="form-card" action="#" method="post" novalidate>
+        <div class="row">
+          <div class="field">
+            <label for="nombre">Nombre</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              required
+              placeholder="Tu nombre completo"
+            />
+          </div>
+
+          <div class="field">
+            <label for="email">Correo electrónico</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="usuario@ejemplo.com"
+            />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="password">Contraseña</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            placeholder="Mínimo 8 caracteres"
+            minlength="8"
+          />
+          <div class="helper">
+            Usa una contraseña segura con números y letras.
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="genero">Género</label>
+          <select id="genero" name="genero">
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+
+        <label class="checkbox-row" for="terminos">
+          <input type="checkbox" id="terminos" name="terminos" required />
+          <span>Acepto los términos y condiciones</span>
+        </label>
+
+        <div class="actions">
+          <button type="reset" class="btn-ghost">Limpiar</button>
+          <button type="submit" class="btn-primary">Registrar</button>
+        </div>
+      </form>
+
+      <!-- lista -->
+      <div class="container">
+        <h2>Usuarios Registrados</h2>
+        <ul id="lista-usuarios">
+          <!-- Los usuarios registrados se mostrarán aquí -->
+          <li>pepe</li>
+          <li>juan</li>
+          <li>Noa</li>
+        </ul>
+      </div>
+    </div>
+    <button type="reset" class="btn-primary" id="cambiar">Cambiar texto</button>
+    <script src="6.3.js"></script>
+    <script src="6.2.js"></script>
+    <script src="6.1.js"></script>
+
+    <script src="Retos.js"></script>
+  </body>
+</html>
