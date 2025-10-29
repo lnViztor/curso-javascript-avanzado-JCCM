@@ -63,3 +63,17 @@ app2.get('/', (req, res) => {
 });
 
 app2.listen(3001,() => console.log('otro servicio escuchando en el 3001'))
+
+
+
+
+
+
+const nuevoDiv = document.createElement("<div id='pepe'>");
+nuevoDiv.textContent = "Hola, soy nuevo en la página DIV";
+nuevoDiv.className = "nuevo-div";
+
+
+
+
+document.body.appendChild(nuevoDiv);
