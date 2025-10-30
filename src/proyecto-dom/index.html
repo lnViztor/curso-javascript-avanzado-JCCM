@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+:root {
+--bg: #0f1115; /* fondo app */
+--panel: #151924; /* fondo panel */
+--btn: #202534; /* botón normal */
+--btn-acc: #2b3147; /* botón funcional */
+--btn-op: #6b5cff; /* botón operador */
+--btn-eq: #00c19a; /* botón igual */
+--txt: #e8ecf1; /* texto principal */
+--muted: #9aa3b2; /* texto secundario */
+--radius: 16px;
+--shadow: 0 8px 24px rgba(0,0,0,.35);
+}
+
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+margin: 0;
+font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+background: radial-gradient(1200px 800px at 75% -10%, #1a1f2b 0%, #0f1115 60%);
+color: var(--txt);
+display: grid;
+place-items: center;
+padding: 24px;
+}
+
+
+.calc {
+width: min(360px, 92vw);
+background: var(--panel);
+border-radius: 24px;
+box-shadow: var(--shadow);
+padding: 16px;
+display: grid;
+gap: 12px;
+}
+
+
+.display {
+background: #0b0e14;
+border-radius: var(--radius);
+padding: 18px 14px;
+min-height: 74px;
+display: grid;
+gap: 6px;
+box-shadow: inset 0 0 0 1px rgba(255,255,255,.04);
+}
+.display .history {
+font-size: 12px;
+color: var(--muted);
+text-align: right;
+min-height: 16px;
+user-select: none;
+}
+.display .value {
+font-variant-numeric: tabular-nums;
+font-size: clamp(28px, 7vw, 40px);
+line-height: 1.2;
+text-align: right;
+word-break: break-all;
+}
+
+
+.keypad {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 8px;
+}
+
+
+.btn {
+appearance: none;
+border: 0;
+padding: 14px 12px;
+border-radius: 14px;
+background: var(--btn);
+color: var(--txt);
+font-size: 18px;
+line-height: 1;
+cursor: pointer;
+box-shadow: 0 2px 0 rgba(0,0,0,.35);
+transition: transform .02s ease, filter .2s ease, background .15s ease;
+user-select: none;
+}
+.btn:active { transform: translateY(1px); }
+.btn:focus-visible { outline: 2px solid #8aa1ff; outline-offset: 2px; }
+
+
+.btn.acc { background: var(--btn-acc); }
+.btn.op { background: var(--btn-op); }
+.btn.eq { background: var(--btn-eq); color: #081a16; font-weight: 700; }
+
+
+.btn.wide { grid-column: span 2; }
+
+
+.footer {
+text-align: center;
+color: var(--muted);
+font-size: 12px;
+margin-top: 4px;
+user-select: none;
+}
+</style>
+
+
+
+</head>
+<body>
+    <div id="calculadora"></div>
+
+    <script src="calculadora.js"></script>
+</body>
+</html>

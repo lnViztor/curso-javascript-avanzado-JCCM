@@ -12,12 +12,13 @@ Durante mucho tiempo JavaScript fue considerado un lenguaje “menor” usado so
 
 JavaScript es un lenguaje:
 
-✅ Interpretado (ejecutado línea a línea)
-✅ Dinámico y de tipado débil
-✅ Basado en prototipos
-✅ Multiparadigma: permite estilo imperativo, funcional y orientado a objetos
-✅ Asíncrono y no bloqueante
-✅ Ejecutable en cliente (navegador) y servidor (Node.js)
+✅ Interpretado (ejecutado línea a línea).  
+✅ Dinámico y de tipado débil.  
+✅ Basado en prototipos.  
+✅ Multiparadigma: permite estilo imperativo, funcional y orientado a objetos.  
+✅ Asíncrono y no bloqueante.  
+✅ Ejecutable en cliente (navegador) y servidor (Node.js).  
+
 
 Es uno de los pilares del desarrollo web moderno junto con **HTML** y **CSS**, y el único lenguaje capaz de ejecutarse de forma nativa en los navegadores.
 
@@ -142,10 +143,10 @@ HTML:
 
 En Codespaces tenemos:
 
-✔ Node.js preinstalado
-✔ Navegador integrado (preview)
-✔ Terminal para scripts
-✔ Live Server o Docker para probar HTML/JS
+✔ Node.js preinstalado  
+✔ Navegador integrado (preview)  
+✔ Terminal para scripts  
+✔ Live Server o Docker para probar HTML/JS  
 
 ---
 
@@ -213,11 +214,11 @@ docker run -p 8080:80 miapp
 
 ## 11. Cierre
 
-En este módulo has aprendido:
-✅ Qué es JavaScript y dónde se ejecuta
-✅ Qué son motor JS, call stack y event loop
-✅ Qué significa ECMAScript
-✅ Cómo usar la consola y ejecutar JS
-✅ Cómo trabajar desde Codespaces
+En este módulo has aprendido:  
+✅ Qué es JavaScript y dónde se ejecuta  
+✅ Qué son motor JS, call stack y event loop  
+✅ Qué significa ECMAScript  
+✅ Cómo usar la consola y ejecutar JS  
+✅ Cómo trabajar desde Codespaces  
 
 Ahora estás listo para entrar en JS moderno con bases sólidas 💪

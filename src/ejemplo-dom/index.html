@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <p id="prefixs"> hola <span>mundo</span> , </p>
+</body>
+
+<script>
+
+   const p = document.getElementById('p')
+
+
+   const regexp = /<span[^>]*>(.*?)<\/span>/g
+   
+   p.innerHTML = p.innerHTML.replace(regexp, '<span>REEMPLAZADO</span>')
+
+   p.innerHTML = p.innerHTML.replace(/hola/, 'adios')
+
+
+</script>
+</html>
