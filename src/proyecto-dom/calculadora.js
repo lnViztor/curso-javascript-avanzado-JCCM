@@ -3,6 +3,24 @@ resta = (op1,op2) => (Number(op1) - Number(op2)).toString()
 operacion= (op1, op2, operacion) => operacion(op1,op2)
 
 
+const Button = ({value, dispatch}) => {
+
+    const pulsar = () => {
+        dispatch(value)
+    } 
+
+    const render = () =>{
+        const element = document.createElement('button')
+        element.classList.add('btn')
+        element.innerHTML = value
+        element.addEventListener('click',(e) => pulsar())
+        return element
+    }
+
+
+    return render()
+}
+
 class Calculadora {
     element = null
     display = new Display()
@@ -17,6 +35,10 @@ class Calculadora {
         history: '0',
         operation: ''
     }
+    
+    
+   
+
 
     setEstado(estado, valor){
         console.log(estado)
@@ -31,7 +53,7 @@ class Calculadora {
 
     }
 
-    on = new Boton('on',(action) => this.dispatch(action))
+    
 
     constructor(selector) {
         this.element = document.getElementById(selector)
@@ -43,7 +65,7 @@ class Calculadora {
         this.element.append(this.display.render())
         this.element.append(this.botonera.render())
         this.element.append(this.botoneraCientifica.render())
-        this.element.append(this.on.render())
+        this.element.append(Button({value: 'on', dispatch: this.dispatch}))
         return this.element
     }
 
@@ -136,4 +158,3 @@ class Boton {
 new Calculadora('calculadora')
 
 // new Calculadora('calculadora2')
-
